@@ -1,0 +1,43 @@
+package:
+  name: uhd
+  version: 3.9.4
+
+source:
+  git_url: https://github.com/EttusResearch/uhd.git
+  git_rev: release_003_009_004
+
+build:
+  binary_has_prefix_files:
+    - bin/octoclock_firmware_burner
+    - bin/uhd_image_loader
+    - lib/libuhd.so.003.009
+    - lib/uhd/examples/gpio
+    - lib/uhd/examples/rx_multi_samples
+    - lib/uhd/examples/rx_samples_to_file
+    - lib/uhd/examples/rx_samples_to_udp
+    - lib/uhd/examples/test_pps_input
+    - lib/uhd/examples/tx_samples_from_file
+    - lib/uhd/examples/tx_waveforms
+    - lib/uhd/tests/time_spec_test
+    - lib/uhd/utils/query_gpsdo_sensors
+
+  has_prefix_files:
+    - bin/uhd_images_downloader
+    - bin/usrp2_card_burner
+    - lib/pkgconfig/uhd.pc
+    - lib/uhd/utils/uhd_images_downloader.py
+
+requirements:
+  build:
+    - toolchain
+    - pkg-config
+    - cmake >=2.8
+    - boost >=1.53
+    - python >=2.7
+    - mako >=0.5.0
+#    - doxygen
+#    - libusb
+
+  run:
+    - python >=2.7
+    - requests	
