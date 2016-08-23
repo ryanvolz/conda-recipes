@@ -9,7 +9,7 @@ source:
 build:
   binary_has_prefix_files:
     - bin/octoclock_firmware_burner
-    - bin/uhd_image_loader
+#    - bin/uhd_image_loader
     - lib/libuhd.so.003.009
     - lib/uhd/examples/gpio
     - lib/uhd/examples/rx_multi_samples
