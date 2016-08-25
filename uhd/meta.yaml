@@ -7,7 +7,7 @@ source:
   git_rev: release_003_009_004
 
 build:
-  number: 0
+  number: 1
   detect_binary_files_with_prefix: True
 
 requirements:
@@ -18,9 +18,25 @@ requirements:
     - boost >=1.53
     - python >=2.7
     - mako >=0.5.0
-#    - doxygen
-#    - libusb
 
   run:
+    - boost >=1.53
     - python >=2.7
     - requests
+
+about:
+  home: http://github.com/EttusResearch/uhd
+  license: GPL-3.0
+  license_file: host/LICENSE
+  summary: 'Software driver and API for the Ettus Research USRP SDR platform'
+  description: |
+    UHD is the free & open-source software driver and API for the Universal
+    Software Radio Peripheral (USRP(TM)) SDR platform, created and sold by
+    Ettus Research. UHD supports all Ettus Research USRP(TM) hardware,
+    including all motherboards and daughterboards, and the combinations thereof.
+  doc_url: http://files.ettus.com/manual/
+  dev_url: http://github.com/EttusResearch/uhd
+
+extra:
+  recipe-maintainers:
+    - ryanvolz
