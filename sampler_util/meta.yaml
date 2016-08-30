@@ -1,0 +1,28 @@
+{% set name = "sampler_util" %}
+{% set version = "1.0" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  git_url: https://github.com/jvierine/python_libs
+  git_rev: master
+
+build:
+  number: 0
+  detect_binary_files_with_prefix: True
+  script: cd {{ name }}; python setup.py install
+
+requirements:
+  build:
+    - python >=2.7,<3
+
+  run:
+    - python >=2.7,<3
+    - numpy
+    - h5py
+
+test:
+  imports:
+    - sampler_util
