@@ -1,0 +1,39 @@
+{% set name = "gr-drf" %}
+{% set version = "1.0.2" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  git_url: https://github.com/ryanvolz/{{ name }}.git
+  git_rev: v{{ version }}
+
+build:
+  number: 0
+  detect_binary_files_with_prefix: True
+
+requirements:
+  build:
+    - toolchain
+    - pkg-config
+    - python >=2.7,<3
+    - boost
+    - swig
+    - hdf5
+    - gnuradio
+    - digital_rf
+  run:
+    - python >=2.7,<3
+    - boost
+    - hdf5
+    - gnuradio
+    - digital_rf
+    # extra requirements for thor script
+    - pytz
+    - dateutil
+    - sampler_util
+
+test:
+  imports:
+    - drf
