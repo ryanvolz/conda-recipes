@@ -1,3 +1,6 @@
+#!/bin/bash
+source activate "${CONDA_DEFAULT_ENV}"
+
 sh autogen.sh
 mkdir build
 cd build

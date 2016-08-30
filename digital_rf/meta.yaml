@@ -1,19 +1,28 @@
+{% set name = "digital_rf" %}
+{% set version = "1.1.3" %}
+
 package:
-  name: digital_rf
-  version: 1.1.3
+  name: {{ name }}
+  version: {{ version }}
 
 source:
-  git_url: https://github.com/ryanvolz/digital_rf.git
-  git_rev: 1.1.3
+  git_url: https://github.com/ryanvolz/{{ name }}.git
+  git_rev: {{ version }}
+
+build:
+  number: 1
+  detect_binary_files_with_prefix: True
 
 requirements:
   build:
-    - python
+    - toolchain
+    - python >=2.7,<3
     - numpy
     - hdf5
+    - pkg-config
     - pkgconfig
   run:
-    - python
+    - python >=2.7,<3
     - numpy
     - h5py
 
