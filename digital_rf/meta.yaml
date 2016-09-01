@@ -1,5 +1,5 @@
 {% set name = "digital_rf" %}
-{% set version = "1.1.3" %}
+{% set version = "2.1.0" %}
 
 package:
   name: {{ name }}
@@ -10,7 +10,7 @@ source:
   git_rev: {{ version }}
 
 build:
-  number: 1
+  number: 0
   detect_binary_files_with_prefix: True
 
 requirements:
