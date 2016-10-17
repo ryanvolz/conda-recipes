@@ -1,12 +1,12 @@
 #!/bin/bash
 source activate "${CONDA_DEFAULT_ENV}"
 
+# make builds with gcc>=5 compatible with conda-forge, currently using gcc<5
+CXXFLAGS="${CXXFLAGS} -D_GLIBCXX_USE_CXX11_ABI=0"
+
 mkdir build
 cd build
 cmake ../ \
-    -DBOOST_INCLUDEDIR=$PREFIX/include \
-    -DBOOST_LIBRARYDIR=$PREFIX/lib \
-    -DBoost_NO_SYSTEM_PATHS=ON \
     -DSWIG_EXECUTABLE=$PREFIX/bin/swig \
     -DCMAKE_PREFIX_PATH=$PREFIX \
     -DCMAKE_INSTALL_PREFIX=$PREFIX
