@@ -6,6 +6,7 @@ mkdir build
 cd build
 ../configure --prefix=${PREFIX}
 make
+make check
 make install
 
 cd ..
