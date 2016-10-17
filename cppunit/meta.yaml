@@ -27,7 +27,7 @@ about:
     CppUnit is the C++ port of the famous JUnit framework for unit testing.
     Test output is in XML for automatic testing and GUI based for supervised
     tests.
-  dev_url: http://git.code.sf.net/p/log4cpp/codegit
+  dev_url: https://cgit.freedesktop.org/libreoffice/cppunit/
 
 extra:
   recipe-maintainers:
