@@ -10,11 +10,10 @@ rm -f cmake/Modules/FindGSL.cmake
 mkdir build
 cd build
 cmake ../ \
-    -DENABLE_TESTING=OFF \
     -DSWIG_EXECUTABLE=$PREFIX/bin/swig \
     -DENABLE_GR_FCD=OFF \
     -DCMAKE_PREFIX_PATH=$PREFIX \
     -DCMAKE_INSTALL_PREFIX=$PREFIX
 make
-make test
+#make test
 make install
