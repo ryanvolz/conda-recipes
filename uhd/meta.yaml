@@ -1,13 +1,13 @@
 package:
   name: uhd
-  version: 3.10.0.0
+  version: 3.10.1.0
 
 source:
   git_url: https://github.com/EttusResearch/uhd.git
-  git_rev: release_003_010_000_000
+  git_rev: release_003_010_001_000
 
 build:
-  number: 1
+  number: 0
   detect_binary_files_with_prefix: True
 
 requirements:
@@ -15,12 +15,12 @@ requirements:
     - toolchain
     - pkg-config
     - cmake >=2.8
-    - boost >=1.53
+    - boost 1.62.*
     - python >=2.7
     - mako >=0.5.0
 
   run:
-    - boost >=1.53
+    - boost 1.62.*
     - python >=2.7
     - requests
 

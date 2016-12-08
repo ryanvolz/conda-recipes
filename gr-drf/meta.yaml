@@ -7,10 +7,11 @@ package:
 
 source:
   git_url: https://github.com/ryanvolz/{{ name }}.git
-  git_rev: v{{ version }}
+#  git_rev: v{{ version }}
+  git_rev: 8dd37db
 
 build:
-  number: 4
+  number: 5
   detect_binary_files_with_prefix: True
 
 requirements:

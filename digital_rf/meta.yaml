@@ -7,10 +7,11 @@ package:
 
 source:
   git_url: https://github.com/ryanvolz/{{ name }}.git
-  git_rev: {{ version }}
+#  git_rev: {{ version }}
+  git_rev: 3496679
 
 build:
-  number: 2
+  number: 3
   detect_binary_files_with_prefix: True
 
 requirements:
@@ -32,11 +33,10 @@ test:
     - digital_metadata
   source_files:
     - build/source/test_rf_write_hdf5
-    - source/test_digital_rf_hdf5.py
     - testing/*.py
   commands:
     - build/source/test_rf_write_hdf5
-    - python source/test_digital_rf_hdf5.py
+    - python testing/test_digital_rf_hdf5.py
     - rm -r /tmp/hdf5*
     - python testing/test_write_digital_metadata.py
     - python testing/test_read_digital_metadata.py
