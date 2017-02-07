@@ -10,7 +10,7 @@ source:
   git_rev: {{ version }}
 
 build:
-  number: 0
+  number: 1
   detect_binary_files_with_prefix: True
 
 requirements:
@@ -31,10 +31,8 @@ test:
     - digital_rf_hdf5
     - digital_metadata
   source_files:
-    - build/source/test_rf_write_hdf5
     - testing/*.py
   commands:
-    - build/source/test_rf_write_hdf5
     - python testing/test_digital_rf_hdf5.py
     - rm -r /tmp/hdf5*
     - python testing/test_write_digital_metadata.py

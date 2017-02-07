@@ -7,6 +7,7 @@ cd build
 ../configure --prefix=${PREFIX}
 make
 make check
+source/test_rf_write_hdf5
 make install
 
 cd ..
