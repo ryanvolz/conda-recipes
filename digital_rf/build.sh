@@ -8,6 +8,7 @@ cd build
 make
 make check
 source/test_rf_write_hdf5
+rm -r /tmp/hdf5
 make install
 
 cd ..
