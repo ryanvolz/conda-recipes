@@ -1,12 +1,12 @@
 {% set name = "digital_rf" %}
-{% set version = "2.3.0rc1" %}
+{% set version = "2.4.0" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  git_url: https://github.com/ryanvolz/{{ name }}.git
+  git_url: git@github.mit.edu:/rvolz/{{ name }}.git
   git_rev: {{ version }}
 
 build:
@@ -18,24 +18,34 @@ requirements:
     - toolchain
     - python >=2.7,<3
     - numpy
-    - hdf5
-    - pkg-config
-    - pkgconfig
+    - hdf5 >=1.8
+    - gnuradio
+    - boost 1.62.*
+    - swig
+    - cppunit
   run:
     - python >=2.7,<3
+    - hdf5 >=1.8
+    - gnuradio
+    - boost 1.62.*
     - numpy
-    - hdf5
     - h5py
+    - matplotlib
+    - scipy
+    - watchdog
+    # extra requirements for thor script
+    - pytz
+    - dateutil
 
 test:
   imports:
-    - digital_rf_hdf5
-    - digital_metadata
+    - digital_rf
+    - digital_rf.digital_rf_hdf5
   source_files:
-    - testing/*.py
+    - tests/*.py
     - examples/*.py
   commands:
-    - python testing/test_digital_rf_hdf5.py
+    - python tests/test_digital_rf_hdf5.py
     - rm -r /tmp/hdf5*
     - python examples/example_write_digital_metadata.py
     - python examples/example_read_digital_metadata.py
