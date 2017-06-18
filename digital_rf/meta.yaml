@@ -18,14 +18,14 @@ requirements:
     - toolchain
     - python >=2.7,<3
     - numpy x.x
-    - hdf5 >=1.8
+    - hdf5 1.8.18|1.8.18.*
     - gnuradio
     - boost 1.62.*
     - swig
     - cppunit
   run:
     - python >=2.7,<3
-    - hdf5 >=1.8
+    - hdf5 1.8.18|1.8.18.*
     - gnuradio
     - boost 1.62.*
     - numpy x.x
