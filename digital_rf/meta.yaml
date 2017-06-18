@@ -1,5 +1,5 @@
 {% set name = "digital_rf" %}
-{% set version = "2.4.0" %}
+{% set version = "2.5.0" %}
 
 package:
   name: {{ name }}
@@ -17,7 +17,7 @@ requirements:
   build:
     - toolchain
     - python >=2.7,<3
-    - numpy
+    - numpy x.x
     - hdf5 >=1.8
     - gnuradio
     - boost 1.62.*
@@ -28,7 +28,7 @@ requirements:
     - hdf5 >=1.8
     - gnuradio
     - boost 1.62.*
-    - numpy
+    - numpy x.x
     - h5py
     - matplotlib
     - scipy
