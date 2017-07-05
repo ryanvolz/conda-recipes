@@ -1,0 +1,35 @@
+{% set name = "cppunit" %}
+{% set version = "1.13.2" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  git_url: https://anongit.freedesktop.org/git/libreoffice/cppunit.git
+  git_rev: {{ name }}-{{ version }}
+
+build:
+  number: 1
+  detect_binary_files_with_prefix: True
+
+requirements:
+  build:
+    - autoconf
+    - m4
+    - llvm
+
+about:
+  home: https://freedesktop.org/wiki/Software/cppunit/
+  license: LGPL-2.1
+  license_file: COPYING
+  summary: C++ unit testing library
+  description: |
+    CppUnit is the C++ port of the famous JUnit framework for unit testing.
+    Test output is in XML for automatic testing and GUI based for supervised
+    tests.
+  dev_url: https://cgit.freedesktop.org/libreoffice/cppunit/
+
+extra:
+  recipe-maintainers:
+    - ryanvolz
