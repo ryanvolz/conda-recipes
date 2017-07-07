@@ -16,8 +16,9 @@ build:
 requirements:
   build:
     - toolchain
-    - libtool  # [unix]
-    - llvm  # [osx]
+    - automake
+    - libtool
+    - gcc  # [osx]
 
 about:
   home: http://log4cpp.sourceforge.net
