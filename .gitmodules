@@ -1,0 +1,15 @@
+[submodule "log4cpp-feedstock"]
+	path = log4cpp-feedstock
+	url = git@github.com:ryanvolz/log4cpp-feedstock.git
+[submodule "libusb-feedstock"]
+	path = libusb-feedstock
+	url = git@github.com:ryanvolz/libusb-feedstock.git
+[submodule "uhd-feedstock"]
+	path = uhd-feedstock
+	url = git@github.com:ryanvolz/uhd-feedstock.git
+[submodule "gnuradio-feedstock"]
+	path = gnuradio-feedstock
+	url = git@github.com:ryanvolz/gnuradio-feedstock.git
+[submodule "digital_rf-feedstock"]
+	path = digital_rf-feedstock
+	url = git@github.com:ryanvolz/digital_rf-feedstock.git
