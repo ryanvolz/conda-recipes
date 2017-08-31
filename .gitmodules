@@ -13,3 +13,6 @@
 [submodule "digital_rf-feedstock"]
 	path = digital_rf-feedstock
 	url = git@github.com:ryanvolz/digital_rf-feedstock.git
+[submodule "volk-feedstock"]
+	path = volk-feedstock
+	url = git@github.com:ryanvolz/volk-feedstock.git
